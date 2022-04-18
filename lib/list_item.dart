@@ -19,7 +19,7 @@ class ListItem extends StatelessWidget {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: Image.asset(place.imageAsset),
+            child: Image.network(place.img),
           ),
           Expanded(
             flex: 1,
@@ -30,7 +30,7 @@ class ListItem extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text(
-                    place.name,
+                    place.title,
                     style: TextStyle(fontSize: 16.0),
                   ),
                   SizedBox(
@@ -40,7 +40,7 @@ class ListItem extends StatelessWidget {
                 ],
               ),
             ),
-          ), 
+          ),
           Checkbox(
             checkColor: Colors.blueAccent,
             value: isDone,

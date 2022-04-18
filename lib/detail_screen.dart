@@ -15,11 +15,11 @@ class DetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Image.asset(place.imageAsset),
+              Image.network(place.img),
               Container(
                   margin: EdgeInsets.only(top: 16.0, left: 20.0, right: 20.0),
                   child: Text(
-                    place.name,
+                    place.title,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30.0,
@@ -35,19 +35,19 @@ class DetailScreen extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         Icon(Icons.calendar_today),
-                        Text(place.open),
+                        Text(place.openDay),
                       ],
                     ),
                     Column(
                       children: <Widget>[
                         Icon(Icons.schedule),
-                        Text(place.hour),
+                        Text(place.openTime),
                       ],
                     ),
                     Column(
                       children: <Widget>[
                         Icon(Icons.attach_money),
-                        Text(place.cost),
+                        Text(place.price),
                       ],
                     )
                   ],
@@ -73,21 +73,21 @@ class DetailScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(place.image1),
+                          child: Image.network(place.img1),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(place.image2),
+                          child: Image.network(place.img2),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(place.image3),
+                          child: Image.network(place.img3),
                         ),
                       ),
                     ]),

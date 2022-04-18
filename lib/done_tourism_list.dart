@@ -4,10 +4,10 @@ import '/provider/done_tourism_provider.dart';
 import 'model/tourism_place.dart';
 
 class DoneTourismList extends StatelessWidget {
-  const DoneTourismList({Key? key}) : super(key: key);
-  // final List<TourismPlace> doneTourismPlaceList;
-  // const DoneTourismList({Key? key, required this.doneTourismPlaceList})
-  //     : super(key: key);
+  // const DoneTourismList({Key? key, List<TourismPlace> doneTourismPlaceList}) : super(key: key);
+  final List<TourismPlace> doneTourismPlaceList;
+  const DoneTourismList({Key? key, required this.doneTourismPlaceList})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class DoneTourismList extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    place.name,
+                    place.title,
                     style: const TextStyle(fontSize: 16.0),
                   ),
                   const Icon(Icons.done_outline),

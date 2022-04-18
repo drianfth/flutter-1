@@ -27,6 +27,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  http: ^0.13.4
+  # webview_flutter: ^2.0.4
   flutter:
     sdk: flutter
 
@@ -56,8 +58,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  assets:
-    - assets/images/
+  # assets:
+  # - assets/images/
+  #   - img/
+  # - http://192.168.1.15:8080/img/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

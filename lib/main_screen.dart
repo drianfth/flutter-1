@@ -9,28 +9,32 @@ class MainScreen extends StatefulWidget {
   MainScreen({Key? key}) : super(key: key);
 
   @override
-  // ignore: override_on_non_overriding_member
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final List<TourismPlace> doneTourismPlaceList = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wisata Surabaya'),
+        title: const Text("Korean Tourism Place"),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.done_outline),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return DoneTourismList();
-              }));
-            },
-          ),
+              icon: const Icon(Icons.done_outline),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return DoneTourismList(
+                      doneTourismPlaceList: doneTourismPlaceList,
+                    );
+                  }),
+                );
+              })
         ],
       ),
-      body: TourismList(),
+      body: TourismList(doneTourismPlaceList: doneTourismPlaceList),
     );
   }
 }
