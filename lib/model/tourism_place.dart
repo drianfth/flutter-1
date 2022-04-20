@@ -26,6 +26,7 @@ class TourismResult {
 }
 
 class TourismPlace {
+  String id;
   String title;
   String description;
   String openDay;
@@ -39,6 +40,7 @@ class TourismPlace {
 
   TourismPlace(
       {required this.location,
+      required this.id,
       required this.title,
       required this.description,
       required this.openDay,
@@ -50,6 +52,7 @@ class TourismPlace {
       required this.img3});
 
   factory TourismPlace.fromJson(Map<String, dynamic> json) => TourismPlace(
+      id: json['id'],
       location: json['location'],
       title: json['title'],
       description: json['description'],

@@ -11,22 +11,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Korean Tourism Place',
+      title: 'Surabaya Tourism Place',
       theme: ThemeData(),
       home: MainScreen(),
     );
-    // return ChangeNotifierProvider(
-    //   create: (context) => DoneTourismProvider(),
-    //   child: MaterialApp(
-    //     title: 'Contacts',
-    //     theme: ThemeData(),
-    //     home: MainScreen(),
-    //   ),
-    // );
   }
 }

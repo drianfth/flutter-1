@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'model/tourism_place.dart';
+import 'package:project_1/editScreen.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({Key? key, required this.place}) : super(key: key);
@@ -10,6 +11,23 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(place.title),
+        actions: <Widget>[
+          IconButton(
+              icon: const Icon(Icons.edit_outlined),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return editScreen(
+                      place: place,
+                    );
+                  }),
+                );
+              }),
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
