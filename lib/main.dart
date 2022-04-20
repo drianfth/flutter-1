@@ -14,13 +14,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => DoneTourismProvider(),
-      child: MaterialApp(
-        title: 'Contacts',
-        theme: ThemeData(),
-        home: MainScreen(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Korean Tourism Place',
+      theme: ThemeData(),
+      home: MainScreen(),
     );
+    // return ChangeNotifierProvider(
+    //   create: (context) => DoneTourismProvider(),
+    //   child: MaterialApp(
+    //     title: 'Contacts',
+    //     theme: ThemeData(),
+    //     home: MainScreen(),
+    //   ),
+    // );
   }
 }
